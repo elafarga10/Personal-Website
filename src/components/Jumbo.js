@@ -2,6 +2,8 @@ import React from 'react';
 import { NavigationBar } from './Navigation';
 import { Jumbotron, Container, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import waves from '../images/ocean.jpg';
 import styled from 'styled-components';
 
 const Styles = styled.div`
@@ -13,12 +15,12 @@ const Styles = styled.div`
 		padding: 225px;
 	}
 	.jumbo {
-		background-color: #323644;
+		background: url(${waves}) no-repeat fixed bottom;
 		background-size: cover;
 		color: #efefef;
 		height: 800px;
 		width: 100%;
-		position: absolute;
+		position: relative;
 		z-index: -2;
 		margin-top: 0px;
 		margin-bottom: 0px;
@@ -38,7 +40,6 @@ const Styles = styled.div`
 	.overlay {
 		background-color: #000;
 		opacity: 0.6;
-		position: absolute;
 		top: 0;
 		left: 0;
 		bottom: 0;
@@ -62,7 +63,11 @@ export const Background = () => {
 								to use!
 							</p>
 							<div className='icons'>
-								<FontAwesomeIcon className='icon' icon={['fab', 'github']} />
+								<FontAwesomeIcon
+									className='icon'
+									icon={['fab', 'github']}
+								/>
+
 								<FontAwesomeIcon className='icon' icon={['fab', 'linkedin']} />
 								<FontAwesomeIcon className='icon' icon={['fab', 'google']} />
 							</div>

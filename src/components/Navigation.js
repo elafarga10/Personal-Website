@@ -18,7 +18,7 @@ const Styles = styled.div`
 	a,
 	.navbar-brand,
 	.navbar-nav .nav-link {
-		color: green;
+		color: black;
 		font-weight: bold;
 		&:hover {
 			color: black;
@@ -31,7 +31,7 @@ export const NavigationBar = () => {
 		<Styles>
 			<Nav className='ml-auto justify-content-center'>
 				<Nav.Item>
-					<Nav.Link href='/'>Home</Nav.Link>
+					<Nav.Link>Skills</Nav.Link>
 				</Nav.Item>
 				<Nav.Item>
 					<Nav.Link>Resume</Nav.Link>
@@ -41,9 +41,6 @@ export const NavigationBar = () => {
 				</Nav.Item>
 				<Nav.Item>
 					<Nav.Link>About</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link>Contact</Nav.Link>
 				</Nav.Item>
 			</Nav>
 		</Styles>
