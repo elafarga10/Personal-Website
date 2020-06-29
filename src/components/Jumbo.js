@@ -21,7 +21,6 @@ const Styles = styled.div`
 		height: 800px;
 		width: 100%;
 		position: relative;
-		z-index: -2;
 		margin-top: 0px;
 		margin-bottom: 0px;
 	}
@@ -30,21 +29,20 @@ const Styles = styled.div`
 		text-align: center;
 	}
 	.icon {
-		font-size: 25px;
+		font-size: 30px;
 		margin-left: 15px;
 		text-align: center;
+		z-index: 1;
+		transition: 0.5s;
 	}
+
 	.icon:hover {
+		font-size: 40px;
 		color: black;
 	}
-	.overlay {
-		background-color: #000;
-		opacity: 0.6;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		z-index: -1;
+
+	a {
+		color: inherit;
 	}
 `;
 
@@ -62,15 +60,17 @@ export const Background = () => {
 								frontend and enjoy creating interactive applications for people
 								to use!
 							</p>
-							<div className='icons'>
-								<FontAwesomeIcon
-									className='icon'
-									icon={['fab', 'github']}
-								/>
-
+							<a href='https://github.com/elafarga10' target='_blank'>
+								<FontAwesomeIcon className='icon' icon={['fab', 'github']} />
+							</a>
+							<a
+								href='https://www.linkedin.com/in/emilianolafarga/'
+								target='_blank'>
 								<FontAwesomeIcon className='icon' icon={['fab', 'linkedin']} />
+							</a>
+							<a href='mailto: elafarga10@gmail.com' target='_blank'>
 								<FontAwesomeIcon className='icon' icon={['fab', 'google']} />
-							</div>
+							</a>
 						</div>
 					</div>
 				</Container>
